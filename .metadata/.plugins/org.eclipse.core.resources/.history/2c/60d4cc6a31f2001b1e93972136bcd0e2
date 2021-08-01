@@ -1,0 +1,57 @@
+package ArrayProblem1;
+
+import java.util.*;
+public class Problem4 {
+
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		Scanner sc = new Scanner(System.in);
+//		int ar1[]= {12,33,11,23,4,11,12,11,12,11,12};
+//		Arrays.sort(ar1);
+//		int ar2[] = new int[ar1.length-1];
+//		ar2[0]=	ar1[0];
+//		
+//		System.out.println(Arrays.toString(ar1));
+////		System.out.println("enter position to get nth max number ");
+////		int n = sc.nextInt();
+//		
+//		int j=0;
+//		for (int i = 0; i < ar1.length; i++) {
+//			if(ar1[i]!=ar2[j]) 
+//				ar2[++j] = ar1[i];
+//		}
+//		for (int i = 0; i <= j; i++) {
+//			ar1[i] = ar2[i];
+//		}
+//		System.out.println(Arrays.toString(ar1));
+//	}
+//
+//}
+	public static int removeDuplicateElements(int arr[], int n){  
+        if (n==0 || n==1){  
+            return n;  
+        }  
+        int[] temp = new int[n];  
+        int j = 0;  
+        for (int i=0; i<n-1; i++){  
+            if (arr[i] != arr[i+1]){  
+                temp[j++] = arr[i];  
+            }  
+         }  
+        temp[j++] = arr[n-1];     
+        // Changing original array  
+        for (int i=0; i<j; i++){  
+            arr[i] = temp[i];  
+        }  
+        return j;  
+    }  
+       
+    public static void main (String[] args) {  
+        int arr[] = {10,20,20,30,30,40,50,50};  
+        int length = arr.length;  
+        length = removeDuplicateElements(arr, length);  
+        //printing array elements  
+        for (int i=0; i<length; i++)  
+           System.out.print(arr[i]+" ");  
+    }  
+}  

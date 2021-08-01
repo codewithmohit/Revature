@@ -1,0 +1,18 @@
+package ArrayProblem1;
+
+import java.util.*;
+public class Problem4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int ar1[]= {12,33,11,23,4,11,12,11,12,11,12};
+		System.out.println(Arrays.toString(ar1));
+		System.out.println("enter position to get nth max number ");
+		int n = sc.nextInt();
+		Arrays.sort(ar1);
+		System.out.println(Arrays.toString(ar1));
+		
+	}
+
+}
