@@ -1,0 +1,23 @@
+// Given a right angle triangle with sides a, b and c. 
+// As per Pythagoras theorem the hypotenuse side c can be calculated 
+// as square root of a square plus b square. Write a program to 
+// compute the hypotenuse, when a and b are provided.
+
+package Problem4;
+
+public class Problem4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int a = 5;
+	int b = 4;
+	double c = getHypotenuse(a,b);
+	
+	System.out.println("Hypotenuse is " +c);
+	
+	}
+	
+	public static double getHypotenuse(int a,int b) {
+		return Math.sqrt(a*a + b*b);
+	}
+}

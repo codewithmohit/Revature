@@ -1,0 +1,27 @@
+// Given a website address as a string, find out if the website is secure
+// or not. A website address starting with "http" is not secure and a 
+// website with "https" is secure.
+
+package RegexProblem2;
+
+public class Problem2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1="https://en.wikipedia.org/wiki/Main_Page";
+		String s2="http://en.wikipedia.org/wiki/Main_Page";
+		checkSecure(s1);
+		checkSecure(s2);
+	}
+	
+	public static void checkSecure(String s) {
+		if(s.charAt(4) == 's')
+			System.out.println("Website is Secure.");
+		else {
+			System.out.println("Website is not secure.");
+		}
+	}
+
+}
+
+
