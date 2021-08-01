@@ -12,8 +12,9 @@ public class Problem1 {
 		System.out.println(Arrays.toString(ar1));
 		int res[] = removeDuplicate(ar1);
 		
-		System.out.println(Arrays.toString(res));
-		
+		for (int i : res) {
+			System.out.print(i +",");
+		}
 	}
 	public static int[] removeDuplicate(int ar1[]) {
 		Arrays.sort(ar1);

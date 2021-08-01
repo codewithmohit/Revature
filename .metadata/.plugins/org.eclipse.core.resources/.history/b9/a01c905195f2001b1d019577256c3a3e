@@ -1,0 +1,13 @@
+package ArrayProblem5;
+
+import java.util.Arrays;
+
+public class Problem5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ar1[]= {12,33,11,23,4,11,12,11,12,11,12};
+		System.out.println(Arrays.toString(ar1));
+	}
+
+}

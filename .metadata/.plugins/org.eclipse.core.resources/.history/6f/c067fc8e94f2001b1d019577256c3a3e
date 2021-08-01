@@ -10,29 +10,20 @@ public class Problem1 {
 		
 		int ar1[]= {12,33,11,23,4,11,12,11,12,11,12};
 		System.out.println(Arrays.toString(ar1));
-		int res[] = removeDuplicate(ar1);
-		
-		System.out.println(Arrays.toString(res));
-		
+		removeDuplicate(ar1);
 	}
-	public static int[] removeDuplicate(int ar1[]) {
+	public static void removeDuplicate(int ar1[]) {
 		Arrays.sort(ar1);
-		
 		int ar2[] = new int[ar1.length];
 		ar2[0]=	ar1[0];
-		
 	    int j=0;
 		for (int i = 0; i < ar1.length; i++) {
 			if(ar1[i]!=ar2[j]) 
 				ar2[++j] = ar1[i];
 		}
-		
-		int res[] = new int[j+1];
-		
-		for (int i = 0; i < res.length; i++) {
-			res[i] = ar2[i];
+		for (int i = 0; i <= j; i++) {
+			System.out.print(ar2[i]+" ");
 		}
-		return res;
 	}
 
 }
