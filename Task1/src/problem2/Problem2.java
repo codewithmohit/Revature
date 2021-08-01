@@ -1,3 +1,6 @@
+//If the word is of odd length then convert middle letter to uppercase 
+//	else convert first letter to uppercase
+
 package problem2;
 
 import java.util.Scanner;
@@ -22,9 +25,9 @@ public class Problem2 {
 				s1.append(s2[i].substring(0,mid-1)).append(Character.toUpperCase(s2[i].charAt(mid-1))).append(s2[i].substring(mid)).append(" ");
 			}
 		}
-		return s1.toString().trim();
-		
+		return s1.toString().trim();	
 	}
-	
-
 }
+
+// Input  : how are you mohit
+// Output :hOw aRe yOu moHit

@@ -1,0 +1,39 @@
+// Find all prime numbers in array
+
+package ArrayProblem3;
+
+public class Problem3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int ar[] = {2,6,3,55,26,48,322,15,29,61};	
+		int res[] = getResult(ar);
+		
+		for (int i : res) {
+			if(i!=0)
+				System.out.print(i + " ");
+		}
+
+	}
+	
+	public static int[] getResult(int ar[]) {
+		int res[] = new int[ar.length];
+		int j=0;
+		for (int i = 0; i < ar.length; i++) {
+			if(checkPrime(ar[i])) {
+				res[j++] = ar[i];
+			}
+		}
+		return res;
+	}
+	public static boolean checkPrime(int a) {
+		
+		for (int i = 2; i <= a/2; i++) {
+			if(a%i==0)
+				return false;
+		}
+		return true;
+	}
+
+}

@@ -1,5 +1,7 @@
-package problem3;
+// In every word if it is not palindrome then reverse it 
+// and print back the whole sentence. 
 
+package problem3;
 import java.util.Scanner;
 
 public class Problem3 {
@@ -37,5 +39,7 @@ public class Problem3 {
 //		}
 //		return false;
 //	}
-
 }
+
+// Input  : mohit jindal how are you lol
+// Output : tihom ladnij woh era uoy lol

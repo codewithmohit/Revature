@@ -1,3 +1,5 @@
+//Convert every word's last letter to upper case
+
 package problem1;
 
 import java.util.Scanner;
@@ -24,3 +26,6 @@ public class Problem1 {
 	}
 
 }
+
+// Input  : Mohit jindal how are you
+// Output :MohiT jindaL hoW arE yoU
