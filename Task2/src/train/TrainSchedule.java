@@ -13,7 +13,7 @@ public class TrainSchedule {
 	public void printSchedule() {
 		System.out.println("Yasvantpur Delhi Sarai Rohilla AC Duronto Express (12213)");
 		System.out.println("--------------------------------------");
-		System.out.println("#  Code   Station        Arr.   Dep.");
+		System.out.println("#  Code      Station        Arr.   Dep.");
 		System.out.println("--------------------------------------");
 		
 		for (Schedule x : schedule) {

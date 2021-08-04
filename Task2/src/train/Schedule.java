@@ -15,7 +15,7 @@ public class Schedule {
 		this.dep = dep;
 	}
 	public void printSchedule() {
-		System.out.printf("%d %2s %3s %7s %3s\n",serial,code,station,
+		System.out.printf("%d %2s %17s %8s %11s\n",serial,code,station,
 				arr,dep);
 	}
 }
