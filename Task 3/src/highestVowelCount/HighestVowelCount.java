@@ -19,7 +19,7 @@ public class HighestVowelCount {
 	}
 	public static String hello(String s) {
 		String[] ar=s.split(" ");
-		Arrays.sort(ar);
+
 		Map<Integer,String> map=new TreeMap<>(Collections.reverseOrder());
 		for(String w:ar) {
 			//int length=w.length();
