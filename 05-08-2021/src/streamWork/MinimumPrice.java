@@ -2,6 +2,8 @@ package streamWork;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 public class MinimumPrice{
 	
 	
@@ -27,5 +29,26 @@ public class MinimumPrice{
 		               .map(e->e.getCost()).min((a,b)->a.compareTo(b)).get();
 			
 			System.out.println("Minimum price of Xyz Travels :"+d);
+			
+			// anyMatch gives returns whether any elements of this stream match the provided predicate. 
+			boolean b = busList.stream().map(x->x.getProviderName()).anyMatch(x->x.matches("Jee Travels"));
+			System.out.println(b);
+			
+			//Stream.allMatch() returns whether all elements of this stream match the provided predicate.
+			b = busList.stream().allMatch(x->x.getProviderName().matches("Abc Travels"));
+			System.out.println(b);
+			
+			System.out.println("Unique Provider Name");
+			//distinct() returns a stream consisting of distinct elements in a stream
+			busList.stream().map(x->x.getProviderName()).distinct().forEach(System.out::println);
+			
+			// Convert the Stream to Map.
+			
+			Map<Object, Object> res = busList.stream().map(x->x.getProviderName())
+									.distinct()
+									.collect(Collectors.toMap(value->value,value->value.length()));
+			
+			System.out.println(res);
+			
 		}
 }
