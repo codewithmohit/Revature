@@ -52,6 +52,7 @@ class Consumer implements Runnable{
 	}
 	public void run() {
 		while(true) {r.get();}
+		
 	}
 }//end of consumer
 
@@ -61,6 +62,7 @@ public static void main(String[] args) {
 	Resource r = new Resource();
 	new Producer(r);
 	new Consumer(r);
+	
 }//end of main
 
 }//end of public class
