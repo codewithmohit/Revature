@@ -9,7 +9,8 @@ public class Player {
 	private int age;
 	private String sportsName;
 	private long contact;
-
+	private int teamId;
+	
 	public Player() {
 		super();
 	}
@@ -60,7 +61,16 @@ public class Player {
 		this.contact = contact;
 	}
 
-	public Player(int id, String name, String gender, String city, int age, String sportsName, long contact) {
+	public int getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
+	}
+
+	public Player(int id, String name, String gender, String city, int age, String sportsName, long contact,
+			int teamId) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -69,12 +79,18 @@ public class Player {
 		this.age = age;
 		this.sportsName = sportsName;
 		this.contact = contact;
+		this.teamId = teamId;
 	}
 
 	@Override
 	public String toString() {
 		return "Player [id=" + id + ", name=" + name + ", gender=" + gender + ", city=" + city + ", age=" + age
-				+ ", sportsName=" + sportsName + ", contact=" + contact + "]";
+				+ ", sportsName=" + sportsName + ", contact=" + contact + ", teamId=" + teamId + "]";
 	}
+	
+	
+	
+	
+	
 		
 }
