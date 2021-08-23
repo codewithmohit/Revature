@@ -7,7 +7,7 @@ import com.app.dao.PlayerDAO;
 import com.app.dao.TeamDAO;
 import com.app.dao.imp.PlayerDaoImp;
 import com.app.dao.imp.TeamDaoImp;
-import com.app.model.Team;
+import com.app.model.Player;
 
 public class PlayerMain {
 
@@ -15,10 +15,10 @@ public class PlayerMain {
 
 		PlayerDAO playerDAO = new PlayerDaoImp();
 
-// Insert Entry in Player Table 
+		// Insert Entry in Player Table
 //		try {
-//			Player player = new Player(101,"Mohit Jindal","M","Bharatpur",22,"Cricket",9511500754L);	
-//			if(playerDAO.createPlayer(player)==1) {
+//			Player player = new Player(113, "Prathvi", "M", "India", 26, "Cricket", 953216479L, 1);
+//			if (playerDAO.createPlayer(player) == 1) {
 //				System.out.println("Player Entry Inserted and Details are below");
 //				System.out.println(player);
 //			}
@@ -47,16 +47,16 @@ public class PlayerMain {
 //			}
 
 		// Show entry in Database
-//		try {
-//			List<Player> playerList =playerDAO.getAllPlayer();
-//			System.out.println("Successful");
-//			for (Player player1 : playerList) {
-//				System.out.println(player1);
-//			}
-//			
-//		} catch (BusinessException e) {
-//			System.out.println(e.getMessage());
-//		}
+		try {
+			List<Player> playerList = playerDAO.getAllPlayer();
+			System.out.println("Successful");
+			for (Player player1 : playerList) {
+				System.out.println(player1);
+			}
+
+		} catch (BusinessException e) {
+			System.out.println(e.getMessage());
+		}
 
 		TeamDAO teamDao = new TeamDaoImp();
 		// Insert Team
@@ -69,18 +69,18 @@ public class PlayerMain {
 //		}
 
 		// Get All Team
-		try {
-			List<Team> teamList = teamDao.getAllTeams();
-
-			if (teamList != null & teamList.size() > 0) {
-				System.out.println("Total team is " + teamList.size() + " and Details are Below -->");
-				for (Team team : teamList) {
-					System.out.println(team);
-				}
-			}
-		} catch (BusinessException e) {
-			System.out.println(e.getMessage());
-		}
+//		try {
+//			List<Team> teamList = teamDao.getAllTeams();
+//
+//			if (teamList != null & teamList.size() > 0) {
+//				System.out.println("Total team is " + teamList.size() + " and Details are Below -->");
+//				for (Team team : teamList) {
+//					System.out.println(team);
+//				}
+//			}
+//		} catch (BusinessException e) {
+//			System.out.println(e.getMessage());
+//		}
 		System.out.println("*********************************************************************");
 		// Get Team by Team Name
 //		try {
