@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class - JavaScript</title>
+  </head>
+
+  <body>
+    <script>
+      class Employee {
+        constructor(id, name, age) {
+          this.id = id;
+          this.name = name;
+          this.age = age;
+        }
+
+        display() {
+          var gender = new Gender("M", "Male");
+          this.gender = gender.name;
+          console.log(
+            this.id +
+              " " +
+              this.name +
+              " ,gender " +
+              this.gender +
+              " with age " +
+              this.age
+          );
+        }
+      }
+      class Gender {
+        constructor(code, name) {
+          this.code = code;
+          this.name = name;
+        }
+
+        display() {
+          console.log(this.code + " : " + this.name);
+        }
+      }
+      var employee = new Employee(1, "Mohit Jindal", 22);
+      employee.display();
+    </script>
+  </body>
+</html>
