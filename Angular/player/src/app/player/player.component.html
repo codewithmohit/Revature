@@ -1,0 +1,61 @@
+<div *ngIf="flag" class="container">
+    <h1>Player Detail are Here</h1>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Country</td>
+                <td>Avatar</td>
+            </tr>
+        </thead>
+        <tbody *ngFor="let player of playerList">
+            <tr>
+                <td>{{player.id}}</td>
+                <td>{{player.name}}</td>
+                <td>{{player.age}}</td>
+                <td>{{player.country}}</td>
+                <td><img [src]="player.avatar" class="img-thumbnail" alt="..."></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container-fluid">
+    <h1>Enter Player Details:</h1>
+    <form>
+        <div class="mb-3">
+            <label for="id" class="form-label">Id</label>
+            <input type="number" class="form-control" [(ngModel)]="player.id" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="player.name" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" [(ngModel)]="player.age" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" [(ngModel)]="player.country" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="avatar" class="form-label">Avatar</label>
+            <input type="text" class="form-control" [(ngModel)]="player.avatar" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary" style="background:green" (click)="addPlayer()">Add Player</button>
+    </form>
+    <button *ngIf="flag" type="submit" class="btn btn-primary" style="background:red" (click)="deletePlayer()">Delete
+    Player</button>
+
+    <form *ngIf="flag">
+        <div class="mb-3">
+            <label for="id" class="form-label">Enter Id to Delete Player:</label>
+            <input type="number" class="form-control" [(ngModel)]="playerId" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button *ngIf="flag" type="submit" class="btn btn-primary" style="background:red" (click)="deletePlayerById()">Delete
+      Player</button>
+    </form>
+</div>
