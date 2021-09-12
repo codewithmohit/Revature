@@ -1,0 +1,11 @@
+<div class="container">
+    <h3 class="nav justify-content-center" *ngIf="!flag">No Player Exist In Database.</h3>
+
+    <div class="mb-5" *ngIf="flag">
+        <label for="id" class="form-label">Enter Id to Delete Player:</label>
+        <input type="number" class="form-control" [(ngModel)]="id">
+    </div>
+    <button *ngIf="flag" type="button" class="btn btn-primary" style="background:red" (click)="deletePlayerById()">Delete
+    Player</button>
+
+</div>

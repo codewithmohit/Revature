@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="row mb-3">
+        <label for="id" class="col-sm-2 col-form-label">Id</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" [(ngModel)]="player.id">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" [(ngModel)]="player.name">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="teamName" class="col-sm-2 col-form-label">Team Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="teamName" [(ngModel)]="player.teamName">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="avatar" class="col-sm-2 col-form-label">Avatar</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="avatar" [(ngModel)]="player.avatar">
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addPlayer()">Add Player</button>
+
+</div>

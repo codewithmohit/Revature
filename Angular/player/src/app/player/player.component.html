@@ -10,7 +10,8 @@
                 <td>Avatar</td>
             </tr>
         </thead>
-        <tbody *ngFor="let player of playerList">
+        <tbody *ngFor="let player of playerList" [ngClass]="{
+        'highlight':player.id===1}" [ngStyle]="{'font-style':'10px'}">
             <tr>
                 <td>{{player.id}}</td>
                 <td>{{player.name}}</td>
@@ -22,7 +23,7 @@
     </table>
 </div>
 
-<div class="container-fluid">
+<div appCustom class="container-fluid">
     <h1>Enter Player Details:</h1>
     <form>
         <div class="mb-3">
