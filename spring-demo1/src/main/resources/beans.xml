@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="a1" class="com.app.model.Address">
+		<property name="id" value="1"></property>
+		<property name="street" value="Near ganga mandir"></property>
+		<property name="city" value="Jharkhand"></property>
+	</bean>
+	
+	<bean id="a2" class="com.app.model.Address">
+		<property name="id" value="2"></property>
+		<property name="street" value="Near Pink Mall"></property>
+		<property name="city" value="Jaipur"></property>
+	</bean>
+	
+	<bean id="t1" class="com.app.model.Team">
+		<property name="id" value="1"></property>
+		<property name="teamName" value="India"></property>
+	</bean>
+	
+	<bean id="p1" class="com.app.model.Player">
+	<property name="id" value="1"></property>
+	<property name="name" value="Ms Dhoni"></property>
+	<property name="Team" ref="t1"></property>
+	<property name="address">
+		<list>
+			<ref bean="a1"/>
+			<ref bean="a2"/>
+		</list>
+	</property>
+	</bean>
+</beans>

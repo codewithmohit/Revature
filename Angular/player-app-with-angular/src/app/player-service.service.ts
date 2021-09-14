@@ -15,7 +15,6 @@ export class PlayerService {
   }
 
   public viewPlayers(): Player[] {
-
     return this.playerList;
   }
 
