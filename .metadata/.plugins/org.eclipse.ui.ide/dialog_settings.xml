@@ -61,6 +61,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jinda\OneDrive\Desktop\Revature Task\Spring Boot"/>
+			<item value="C:\Users\jinda\OneDrive\Desktop\Revature Task\spring demo(Player)"/>
+			<item value="C:\Users\jinda\OneDrive\Desktop\Revature Task\spring_jdbc_integration_demo"/>
+			<item value="C:\Users\jinda\OneDrive\Desktop\Revature\Week7(Spring,SpringBoot,Spring-Angular)\spring_boot_demos"/>
 			<item value="C:\Users\jinda\OneDrive\Desktop\Revature\Week7(Spring,SpringBoot,Spring-Angular)\spring_demos"/>
 			<item value="C:\Users\jinda\OneDrive\Desktop\Revature\Week4(HTML,CSS,JS,Servlet,REST)\servlet_demos"/>
 			<item value="C:\Users\jinda\OneDrive\Desktop\Revature\Week4(HTML,CSS,JS,Servlet,REST)\servlet_demos\player_restful_api_jersey_style_demo"/>
