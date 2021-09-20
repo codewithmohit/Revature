@@ -8,13 +8,15 @@ import { DeletePlayerComponent } from './delete-player/delete-player.component';
 import { ViewPlayersComponent } from './view-players/view-players.component';
 import { PlayerService } from './player-service.service';
 import { FormsModule } from '@angular/forms';
+import { UpdatePlayerComponent } from './update-player/update-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddPlayerComponent,
     DeletePlayerComponent,
-    ViewPlayersComponent
+    ViewPlayersComponent,
+    UpdatePlayerComponent
   ],
   imports: [
     BrowserModule,

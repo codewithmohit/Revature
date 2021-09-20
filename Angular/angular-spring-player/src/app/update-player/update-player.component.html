@@ -1,0 +1,32 @@
+<div class="container" *ngIf="viewFlag">
+    <h3 class="nav justify-content-center" *ngIf="!flag">No Player Exist In Database.</h3>
+
+    <div class="mb-5" *ngIf="flag">
+        <label for="id" class="form-label">Enter Id to Update Player:</label>
+        <input type="number" class="form-control" [(ngModel)]="id">
+    </div>
+    <button *ngIf="flag" type="button" class="btn btn-primary" style="background:red" (click)="getPlayerById()">Search
+    Player</button>
+</div>
+
+<div class="container-fluid" *ngIf="!viewFlag">
+    <label>Player Name</label>
+    <input class="form-control" type="text" value="{{player.name}}" [(ngModel)]="player.name">
+    <label></label>
+    <div class="form-group">
+        <label for="my-select">Select Player Team</label>
+        <select id="my-select" class="form-control" [(ngModel)]="player.teamName">
+      <option value="India">India</option>
+      <option value="Srilanka">Srilanka</option>
+      <option value="Windies">Windies</option>
+      <option value="South Africa">South Africa</option>
+      <option value="Other Country">Other</option>
+    </select>
+    </div>
+    <label>Player Avatar</label>
+    <img [src]="player.avatar" class="img-thumbnail" alt="...">
+    <input class="form-control" type="text" value="{{player.avatar}}" [(ngModel)]="player.avatar">
+    <br />
+    <br />
+    <button class="btn btn-primary" type="button" (click)="updatePlayer()">Update Player</button>
+</div>

@@ -1,6 +1,7 @@
 package com.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.model.Player;
 import com.app.service.PlayerCRUDService;
 
+
 @RestController
+@CrossOrigin
 public class PlayerCRUDController {
 	
 	@Autowired
@@ -20,12 +23,14 @@ public class PlayerCRUDController {
 	
 	@GetMapping("/player/{id}")
 	public Player getPlayer(@PathVariable int id) {
+		
 		return service.getPlayerById(id);
 	}
 	
 	@PostMapping("/player")
 	public Player addPlayer(@RequestBody Player player) {
-		return service.updatePlayer(player);
+		
+		return service.addPlayer(player);
 	}
 	
 	@PutMapping("/player")
